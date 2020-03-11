@@ -76,6 +76,7 @@ a {
   letter-spacing: .2rem;
   display: flex;
   align-items: center;
+  word-break: break-all;
 }
 
 .contact+.contact {
@@ -101,6 +102,41 @@ a {
     margin-top: -5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header {
+    font-size: .6rem;
+  }
+
+  .header-title {
+    margin: 1rem 2.5rem;
+    padding: 1rem .1rem;
+  }
+
+  .name {
+    font-size: 3.5rem;
+    letter-spacing: .1rem;
+    margin-bottom: .2rem;
+  }
+
+  .contact-method {
+    margin-left: 2.5rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    width: 90%;
+  }
+
+  .contact {
+    padding: .8rem;
+  }
+
+  .contact>i {
+    font-size: 1rem;
+    padding-right: .5rem;
+    margin-right: .5rem;
   }
 }
 
@@ -202,6 +238,12 @@ a {
 
   .card-text {
     margin: .8rem 0;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .card {
+    width: 19rem;
   }
 }
 
@@ -388,6 +430,32 @@ a {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .item {
+    width: 14rem;
+  }
+
+  .item-date {
+    font-size: .1rem;
+  }
+
+  .item-title {
+    font-size: 1rem;
+  }
+
+  .item-company {
+    font-size: .1rem;
+  }
+
+  .item-description {
+    font-size: .8rem;
+  }
+
+  .row>.item-bullet {
+    margin-left: 2rem;
+  }
+}
+
 /* ************************ aw-backdrop ************************ */
 .aw-backdrop {
   position: fixed;
@@ -477,6 +545,7 @@ span.aw-backdrop-close:hover {
 #work-gallery {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 80%;
   margin: auto;
 }
@@ -484,6 +553,7 @@ span.aw-backdrop-close:hover {
 .gallery {
   width: 24%;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.20);
+  margin-bottom: 1rem;
 }
 
 .gallery:hover {
@@ -560,6 +630,12 @@ span.aw-backdrop-close:hover {
   font-size: .5rem;
   font-weight: bold;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 992px) {
+  .gallery {
+    width: 80%;
+  }
 }
 
 /* ************************ animations ************************ */
