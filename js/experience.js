@@ -13,26 +13,31 @@ const createExperience = function () {
     title: "前端工程師",
     company: "科智企業股份有限公司",
     work: [{
+      icon: "table",
       name: "可視化報表",
       description: "使用者操作表單查詢，透過API查詢資料，並以datatables為基礎繪製可檢視、編輯、過濾的報表。",
       tools: ["HTML", "css", "RWD", "Bootstrap 3", "jQuery", "datatables"]
     },
     {
+      icon: "chart-line",
       name: "客製化圖表",
       description: "使用者操作表單查詢，透過API查詢資料，並以jQuery flot為基礎繪製客製化圖表。",
       tools: ["HTML", "css", "RWD", "Bootstrap 3", "jQuery", "jQuery flot"]
     },
     {
+      icon: "wrench",
       name: "網頁編輯工具",
       description: "將系統常用功能模組化後，透過拖拉方式讓使用者排版元件位置，並可做元件名稱、顯示文字、連動的元件等設定。",
       tools: ["HTML", "css", "RWD", "Bootstrap 3", "jQuery", "jQuery UI"]
     },
     {
+      icon: "calendar-alt",
       name: "排程編輯工具",
       description: "以FullCalendar為基礎，建立一個依班次與機台為單位、可拖拉、可編輯工單的排程工具。",
       tools: ["HTML", "css", "RWD", "Bootstrap 3", "jQuery", "FullCalendar"]
     },
     {
+      icon: "chart-pie",
       name: "輪播看板",
       description: "以各種圖表繪製客製看板並定時更新顯示內容，藉此達到輪播功能。",
       tools: ["HTML", "css", "RWD", "Bootstrap 3", "jQuery", "jQuery flot", "d3.js"]
@@ -43,11 +48,13 @@ const createExperience = function () {
     title: "資訊工程系學士",
     company: "虎尾科技大學",
     work: [{
+      icon: "desktop",
       name: "互動式直播教學系統",
       description: "以windowsAPI實現純軟體的廣播系統。老師端可看到學生是否在使用電腦、目前使用的程式與使用時間，可透過資料庫分析出學生整學期的學習狀況，提供老師參考評量。<br>(負責範圍：學生的使用狀況、資料庫以及設定功能)",
       tools: ["c", "windowsAPI"]
     },
     {
+      icon: "gamepad",
       name: "遊戲「1010!」",
       description: "將下方三個物件放入上方框格中，在垂直和水平方向建立並消除整行方塊，阻止方塊填滿整個畫面。",
       tools: ["java", "java Swing"]
@@ -126,6 +133,7 @@ const createExperience = function () {
     const openedImage = `<div class='aw-backdrop'>` +
       `<div class="bulletin-board">` +
       `  <header>` +
+      `    <span><i class="fas fa-${ExpData[expIndex].work[workIndex].icon}"></i></span>` +
       `    <h2>${ExpData[expIndex].work[workIndex].name}</h2>` +
       `    <p>${ExpData[expIndex].work[workIndex].description}</p>` +
       `  </header>` +

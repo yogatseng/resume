@@ -509,6 +509,19 @@ span.aw-backdrop-close:hover {
   padding: 2rem;
 }
 
+.bulletin-board>header>span {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #b9c5d0;
+  color: #263646;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
 .bulletin-board>header>h2 {
   margin: .2rem;
   text-align: center;
