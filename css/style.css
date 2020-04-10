@@ -4,6 +4,7 @@ body {
   color: #b9c5d0;
   font-family: "Microsoft JhengHei";
   padding-bottom: 5rem;
+  margin: 0;
 }
 
 body.open-aw-backdrop {
@@ -24,9 +25,10 @@ a {
 .header-title {
   display: flex;
   flex-direction: column;
-  margin: 4rem 10rem;
-  padding: 4rem 1rem;
-  animation: topEnter 1.1s ease-in;
+  /* margin: 4rem 10rem; */
+  margin: 2rem 10rem 2rem 20rem;
+  /* padding: 4rem 1rem; */
+  padding: 6rem 1rem;
 }
 
 .header-title::before,
@@ -40,13 +42,62 @@ a {
 }
 
 .header-title::before {
-  left: -40%;
+  left: -36%;
   animation: leftEnter 1s linear;
 }
 
 .header-title::after {
   right: 0;
   animation: rightEnter 1s linear;
+}
+
+.photo {
+  position: absolute;
+  left: 5rem;
+  top: 21%;
+}
+
+.photo::before {
+  content: "";
+  border-top: 3px solid #b9c5d0;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: -1.5rem;
+  left: 1.5rem;
+  z-index: -1;
+  box-sizing: border-box;
+  animation: photoTop .5s forwards 1s;
+}
+
+.photo::after {
+  content: "";
+  border-bottom: 3px solid #b9c5d0;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: -1.5rem;
+  left: 1.5rem;
+  z-index: -1;
+  box-sizing: border-box;
+  animation: photoBottom .5s forwards 2s;
+}
+
+.photo>div::after {
+  content: "";
+  border-right: 3px solid #b9c5d0;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  top: -1.5rem;
+  left: 1.5rem;
+  z-index: -1;
+  box-sizing: border-box;
+  animation: photoRight .5s forwards 1.5s;
+}
+
+.photo>img {
+  width: 10rem;
 }
 
 .name {
@@ -674,5 +725,36 @@ span.aw-backdrop-close:hover {
 @keyframes loadProgress {
   0% {
     width: 0%;
+  }
+}
+
+@keyframes photoTop {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes photoRight {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes photoBottom {
+  0% {
+    width: 0%;
+    left: 11.5rem;
+  }
+
+  100% {
+    width: 100%;
   }
 }
